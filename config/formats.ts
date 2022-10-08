@@ -216,27 +216,6 @@ export const Formats: (FormatsData | {section: string, column?: number})[] = [
 			'Heavy-Duty Boots', 'Shadow Tag',
 		],
 	},
-	{
-		name: "[Gen 4] Trick House Renegade Platinum",
-
-		mod: 'renpt',
-		ruleset: ['Standard', '+PastMove', '+Future', '!Species Clause', '!Obtainable Moves', '!Obtainable Abilities', 'Team Preview'],
-		newTypes: [
-			// New types
-			'Charizard', 'Ninetales', 'Golduck', 'Farfetch\u2019d', 'Meganium', 'Feraligatr', 'Noctowl', 'Ampharos', 'Misdreavus',
-			'Sceptile', 'Masquerain', 'Volbeat', 'Illumise', 'Trapinch', 'Vibrava', 'Flygon', 'Swablu', 'Altaria', 'Seviper',
-			'Milotic', 'Glalie', 'Luvdisc', 'Luxray', 'Lopunny', 'Mismagius', 'Electivire', 'Rotom-Heat', 'Rotom-Wash', 'Rotom-Frost',
-			'Rotom-Fan', 'Rotom-Mow', 'Uxie', 'Mesprit', 'Azelf',
-			// Fairy
-			'Clefairy', 'Clefable', 'Jigglypuff', 'Wigglytuff', 'Mr. Mime', 'Cleffa', 'Igglybuff', 'Togepi', 'Togetic', 'Marill',
-			'Azumarill', 'Snubbull', 'Granbull', 'Ralts', 'Kirlia', 'Gardevoir', 'Azurill', 'Mawile', 'Mime Jr.', 'Togekiss'
-		],
-		onSwitchIn(pokemon) {
-			if (this.format.newTypes.includes(pokemon.species.name)) {
-				this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]');
-			}
-		},
-	},
 
 
 
