@@ -248,6 +248,10 @@ export const Tags: {[id: string]: TagData} = {
 		name: "Past",
 		genericFilter: thing => thing.isNonstandard === 'Past',
 	},
+	pastmove: {
+		name: "PastMove",
+		genericFilter: thing => thing.isNonstandard === 'PastMove',
+	},
 	future: {
 		name: "Future",
 		genericFilter: thing => thing.isNonstandard === 'Future',

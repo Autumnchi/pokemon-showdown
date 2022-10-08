@@ -662,6 +662,15 @@ export const Rulesets: {[k: string]: FormatData} = {
 			this.add('rule', 'Evasion Abilities Clause: Evasion abilities are banned');
 		},
 	},
+	evasionitemsclause: {
+		effectType: 'ValidatorRule',
+		name: 'Evasion Items Clause',
+		desc: "Bans moves that lower the accuracy of moves used against the user",
+		banlist: ['Bright Powder', 'Lax Incense'],
+		onBegin() {
+			this.add('rule', 'Evasion Items Clause: Evasion items are banned');
+		},
+	},
 	evasionmovesclause: {
 		effectType: 'ValidatorRule',
 		name: 'Evasion Moves Clause',
